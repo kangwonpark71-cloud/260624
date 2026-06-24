@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Cloudflare Pages: disable Turbopack to avoid path resolution issues
   turbopack: {
-    root: "/home/user/jeju-flow",
+    resolveAlias: {},
   },
 };
 
