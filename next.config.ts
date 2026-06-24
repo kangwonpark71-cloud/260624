@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cloudflare Pages 정적 배포를 위한 설정
-  output: "export",
+  // OpenNext Cloudflare 배포를 위한 설정 (output: export 제거 — OpenNext가 번들링)
   images: {
     unoptimized: true,
   },

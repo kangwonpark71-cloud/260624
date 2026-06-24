@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node -e \"const fs=require('fs'),p='.next/server/pages-manifest.json';fs.mkdirSync(require('path').dirname(p),{recursive:true});fs.writeFileSync(p,'{}')\"",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npx wrangler pages deploy out/ --project-name 260624"
@@ -20,6 +20,7 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
